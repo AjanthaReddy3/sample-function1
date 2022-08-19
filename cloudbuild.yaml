@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - poc_triggermonitor
+  - --source=.
+  - --entry-point=trigger_dag
+  - --runtime=python37
+  - --allow-unauthenticated
